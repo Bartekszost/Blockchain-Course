@@ -1,0 +1,68 @@
+WARNING: You are currently using Node.js v23.9.0, which is not supported by Hardhat. This can lead to unexpected behavior. See https://hardhat.org/nodejs-versions
+
+
+  hardhat:core:vars:varsManager Creating a new instance of VarsManager +0ms
+  hardhat:core:vars:varsManager Loading ENV variables if any +3ms
+  hardhat:core:config Loading Hardhat config from /home/szost/studia/pzb/lab/1/hardhat.config.js +0ms
+  hardhat:core:hre Creating HardhatRuntimeEnvironment +0ms
+  hardhat:core:global-dir Looking up Client Id at /home/szost/.local/share/hardhat-nodejs/analytics.json +0ms
+  hardhat:core:global-dir Client Id found: fa073a19-d101-4849-8b84-55cb14b49d76 +6ms
+  hardhat:core:hre Running task test +17ms
+  hardhat:core:hre Running task compile +3ms
+  hardhat:core:hre Running compile's super +1ms
+  hardhat:core:hre Running task compile:get-compilation-tasks +0ms
+  hardhat:core:hre Running task compile:solidity +1ms
+  hardhat:core:hre Running task compile:solidity:get-source-paths +0ms
+  hardhat:core:hre Running task compile:solidity:get-source-names +3ms
+  hardhat:core:hre Running task compile:solidity:get-dependency-graph +6ms
+  hardhat:core:hre Running task compile:solidity:get-remappings +1ms
+  hardhat:core:hre Running task compile:solidity:read-file +2ms
+  hardhat:core:hre Running task compile:solidity:get-compilation-jobs +10ms
+  hardhat:core:tasks:compile The dependency graph was divided in '1' connected components +0ms
+  hardhat:core:hre Running task compile:solidity:get-compilation-job-for-file +1ms
+  hardhat:core:hre Running compile:solidity:get-compilation-job-for-file's super +0ms
+  hardhat:core:compilation-job File '/home/szost/studia/pzb/lab/1/contracts/Lock.sol' will be compiled with version '0.8.28' +0ms
+  hardhat:core:hre Running task compile:solidity:handle-compilation-jobs-failures +1ms
+  hardhat:core:hre Running task compile:solidity:filter-compilation-jobs +0ms
+  hardhat:core:tasks:compile '1' jobs were filtered out +5ms
+  hardhat:core:hre Running task compile:solidity:merge-compilation-jobs +3ms
+  hardhat:core:hre Running task compile:solidity:compile-jobs +0ms
+  hardhat:core:hre Running compile:solidity:compile-jobs's super +0ms
+  hardhat:core:tasks:compile No compilation jobs to compile +0ms
+  hardhat:core:hre Running task compile:solidity:log:nothing-to-compile +0ms
+  hardhat:core:hre Running task typechain:generate-types +1ms
+  hardhat:core:hre Running task compile:solidity:log:compilation-result +4ms
+  hardhat:core:hre Running task compile:remove-obsolete-artifacts +0ms
+  hardhat:core:hre Running task test:get-test-files +9ms
+  hardhat:core:hre Running task test:setup-test-environment +3ms
+  hardhat:core:hre Running task test:show-fork-recommendations +0ms
+  hardhat:core:hre Running task test:run-mocha-tests +0ms
+  hardhat:core:hre Running test:run-mocha-tests's super +0ms
+
+
+  Lock
+    Deployment
+  hardhat:core:hre Creating provider for network hardhat +193ms
+  hardhat:core:hardhat-network:provider Making tracing config +0ms
+  hardhat:core:hardhat-network:provider Creating EDR provider +40ms
+  hardhat:core:hardhat-network:provider EDR provider created +16ms
+      ✔ Should set the right unlockTime (958ms)
+      ✔ Should set the right owner
+      ✔ Should receive and store the funds to lock
+      ✔ Should fail if the unlockTime is not in the future
+    Withdrawals
+      Validations
+        ✔ Should revert with the right error if called too soon
+        ✔ Should revert with the right error if called from another account
+        ✔ Shouldn't fail if the unlockTime has arrived and the owner calls it
+      Events
+        ✔ Should emit an event on withdrawals
+      Transfers
+        ✔ Should transfer the funds to the owner
+    Send transaction
+      ✔ Should send transactions
+
+
+  10 passing (1s)
+
+  hardhat:core:cli Killing Hardhat after successfully running task test +0ms
